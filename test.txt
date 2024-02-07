@@ -1,0 +1,42 @@
+import Foundation
+
+class BMICalculator {
+  var height : Double = 0
+  var weight : Double = 0
+  var isSIMetric : Bool = true
+
+  init(height: Double, weight: Double, isSIMetric: Bool) {
+    self.height = height
+    self.weight = weight
+    self.isSIMetric = isSIMetric
+  }
+
+  func calculateBMI() -> Double {
+    var bmi = weight / pow(height, 2)
+    if (!isSIMetric) {
+      bmi = bmi * 703
+    }
+    return bmi
+  }
+
+  func getCategory(bmi: Double) -> String {
+    
+    switch bmi {
+      case ...18.4:
+        return "Underweight"
+      case ...24.9:
+        return "Normal"
+      case ...29.9:
+        return "Overweight"
+      default:
+        return "Obese"
+    }
+    
+  }
+
+}
+
+var bmiCalculator = BMICalculator(height: 138, weight: 53.5, isSIMetric: true)
+var bmi_result = bmiCalculator.calculateBMI()
+var bmi_category = bmiCalculator.getCategory(bmi: bmi_result)
+print(bmi_category, bmi_result)
