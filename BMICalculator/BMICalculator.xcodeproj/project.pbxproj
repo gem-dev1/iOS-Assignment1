@@ -16,6 +16,7 @@
 		2F23998A2B6D3E4E00A5FC37 /* BMICalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2399892B6D3E4E00A5FC37 /* BMICalculatorTests.swift */; };
 		2F2399942B6D3E4E00A5FC37 /* BMICalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2399932B6D3E4E00A5FC37 /* BMICalculatorUITests.swift */; };
 		2F2399962B6D3E4E00A5FC37 /* BMICalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2399952B6D3E4E00A5FC37 /* BMICalculatorUITestsLaunchTests.swift */; };
+		2FBAED902B74755A0046C996 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBAED8F2B74755A0046C996 /* InputValidator.swift */; };
 		2FFC6B942B73475E00279659 /* BMICalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFC6B932B73475E00279659 /* BMICalculatorLogic.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		2F23998F2B6D3E4E00A5FC37 /* BMICalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMICalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F2399932B6D3E4E00A5FC37 /* BMICalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorUITests.swift; sourceTree = "<group>"; };
 		2F2399952B6D3E4E00A5FC37 /* BMICalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2FBAED8F2B74755A0046C996 /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		2FFC6B932B73475E00279659 /* BMICalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				2F23997D2B6D3E4E00A5FC37 /* LaunchScreen.storyboard */,
 				2F2399802B6D3E4E00A5FC37 /* Info.plist */,
 				2FFC6B932B73475E00279659 /* BMICalculatorLogic.swift */,
+				2FBAED8F2B74755A0046C996 /* InputValidator.swift */,
 			);
 			path = BMICalculator;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBAED902B74755A0046C996 /* InputValidator.swift in Sources */,
 				2F2399772B6D3E4E00A5FC37 /* ViewController.swift in Sources */,
 				2F2399732B6D3E4E00A5FC37 /* AppDelegate.swift in Sources */,
 				2F2399752B6D3E4E00A5FC37 /* SceneDelegate.swift in Sources */,

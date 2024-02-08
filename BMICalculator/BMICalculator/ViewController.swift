@@ -39,20 +39,30 @@ class ViewController: UIViewController {
     
     @IBAction func onButtonClick(_ sender: UIButton) {
         // Fetch input from both labels
-        let height = Float(heightInput.text!)!
-        let weight = Float(weightInput.text!)!
+        let height = heightInput.text
+        let weight = weightInput.text
         
         // Validate inputs
+        let inputValidator = InputValidator(height: height, weight: weight)
+        let validationMsg = inputValidator.validate()
         
         // Calculate BMI
-        var bmiCalculator = BMICalculatorLogic(height: height, weight: weight, isSIMetric: isSIMetric)
-        let bmi_result = bmiCalculator.calculateBMI()
-        let formatted_bmi = String(format: "%.2f", bmi_result)
-        let bmi_category = bmiCalculator.getCategory(bmi: bmi_result)
-        
-        // Update result
-        //resultBMI.text = "\(height) and \(weight)"
-        resultBMI.text = "Your BMI is \(formatted_bmi) - \(bmi_category)"
+        if validationMsg == "OK" {
+            let actualHeight = Float(height!)!
+            let actualWeight = Float(weight!)!
+            
+            var bmiCalculator = BMICalculatorLogic(height: actualHeight, weight: actualWeight, isSIMetric: isSIMetric)
+            let bmi_result = bmiCalculator.calculateBMI()
+            let formatted_bmi = String(format: "%.2f", bmi_result)
+            let bmi_category = bmiCalculator.getCategory(bmi: bmi_result)
+            
+            // Update result
+            //resultBMI.text = "\(height) and \(weight)"
+            resultBMI.text = "Your BMI is \(formatted_bmi) - \(bmi_category)"
+        }
+        else {
+            resultBMI.text = validationMsg
+        }
     }
 
 
